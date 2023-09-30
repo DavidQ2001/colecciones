@@ -14,10 +14,6 @@ for turno in range(cantidad_turnos):
     
     eleccion_usuario = input("Ingrese su eleccion(piedra,papel,tijera): ").lower()
     
-   
-    print("Usted eligio: {eleccion_usuario}")
-    print("La maquina eigio: {eleccion_maquina}")
-    
     if eleccion_usuario == eleccion_maquina:
         print("En este turno la partida queda en empate")
         
@@ -28,16 +24,17 @@ for turno in range(cantidad_turnos):
               puntaje_usuario += 1
               
     else:
-        print("La maquinagana este turno")
+        print("La maquina gana este turno")
         puntaje_maquina += 1
         
 print("Puntaje final")
-print("Puntaje de usuario: {puntaje_usuario}")
-print("Puntaje maquina: {puntaje_maquina}")
+print(f"Puntaje de usuario: {puntaje_usuario}")
+print(f"Puntaje maquina: {puntaje_maquina}")
 
 if puntaje_usuario > puntaje_maquina:
     print("El usuario gana el juego")
 elif puntaje_maquina > puntaje_usuario:
-    print("L maquina gana el juego")
+     print("La maquina gana el juego")
+
 else:
     print("El juego termina en empate")
